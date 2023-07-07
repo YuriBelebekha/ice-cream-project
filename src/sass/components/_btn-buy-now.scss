@@ -1,28 +1,20 @@
-.btn-buy-now {
-  // @include align(flex, space-between, center);
-  
+.btn-buy-now {  
   color: var(--color-text-black);
-  @include font(600, 14px, 18px, 0em);  
+  @include font(600, 14px, 18px, 0em);
 
-  &__box {
-    @include align(flex, space-between, center);
-    column-gap: 4px;
-    padding: 12px 36px;
+  background-color: var(--color-second-accent-secondary);
+  border-radius: 10px;
 
-    background-color: var(--color-second-accent-secondary);
-    border-radius: 10px;
+  transition: background-color var(--duration) var(--timing-function),
+  color var(--duration) var(--timing-function);
 
-    transition: background-color var(--duration) var(--timing-function),
-                           color var(--duration) var(--timing-function);
-    
-    &:hover,
-    &:focus {
-      background-color: var(--color-btn);         
-    };
+  &:hover,
+  &:focus {
+    background-color: var(--color-btn-hover-focus);         
+  };
 
-    &:focus {        
-      color: var(--color-text-white);   
-    };    
+  &:focus {        
+    color: var(--color-text-white);   
   };
 
   &__icon {
@@ -32,5 +24,15 @@
     &:focus & {
       fill: currentColor;
     };
+  };
+
+  &:disabled {        
+    background-color: var(--color-btn-disabled);
+  }; 
+
+  &__box {
+    @include align(flex, space-between, center);
+    column-gap: 4px;
+    padding: 12px 36px;
   };
 };
