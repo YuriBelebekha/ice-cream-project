@@ -1,7 +1,16 @@
-@import './example';
+// @import './example';
+
+@import './utilities/variables';
+@import './utilities/functions';
+@import './utilities/mixins';
+
+@import './vendors/normalize';
 
 @import './base/common';
 @import './base/container';
 @import './base/reset';
 
-@import './utilities/variables';
+@import './layout/header';
+
+@import './components/logo';
+@import './components/btn-buy-now';

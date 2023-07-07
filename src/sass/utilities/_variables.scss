@@ -2,7 +2,7 @@
   --font-family-primary: 'Montserrat', sans-serif;
   --font-family-heading: 'Seymour One', sans-serif;
 
-  --color-primary: #84A178;
+  --bg-color-primary: #84A178;
 
   --color-first-accent-primary: #AEC6A5;
   --color-first-accent-secondary: #9CBE8F;
@@ -14,5 +14,8 @@
   --color-text-black: #131313;
   --color-text-white: #FCFCFC;
 
-  
+  --color-btn: #0A8817;
+
+  --duration: 1250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

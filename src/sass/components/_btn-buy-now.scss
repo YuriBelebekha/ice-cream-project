@@ -1,0 +1,36 @@
+.btn-buy-now {
+  // @include align(flex, space-between, center);
+  
+  color: var(--color-text-black);
+  @include font(600, 14px, 18px, 0em);  
+
+  &__box {
+    @include align(flex, space-between, center);
+    column-gap: 4px;
+    padding: 12px 36px;
+
+    background-color: var(--color-second-accent-secondary);
+    border-radius: 10px;
+
+    transition: background-color var(--duration) var(--timing-function),
+                           color var(--duration) var(--timing-function);
+    
+    &:hover,
+    &:focus {
+      background-color: var(--color-btn);         
+    };
+
+    &:focus {        
+      color: var(--color-text-white);   
+    };    
+  };
+
+  &__icon {
+    fill: currentColor;
+
+    &:hover &,
+    &:focus & {
+      fill: currentColor;
+    };
+  };
+};

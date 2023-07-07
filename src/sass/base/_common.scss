@@ -1,1 +1,16 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-text-black);
+  font-size: 12px;
+};
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+};
+
+button {
+  cursor: pointer;
+}

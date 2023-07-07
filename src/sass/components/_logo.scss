@@ -1,0 +1,11 @@
+.logo {
+  &__link {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  };
+
+  &__icon {
+    fill: var(--color-second-accent-secondary);
+  };  
+};
