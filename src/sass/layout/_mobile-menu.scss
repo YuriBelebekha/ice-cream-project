@@ -1,0 +1,53 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+
+  background-color: var(--bg-color-primary);
+  
+  z-index: 1;  
+  visibility: hidden;
+  pointer-events: none;  
+  transition-duration: 750ms;
+  
+  &.is-open {
+    left: 0;    
+    visibility: visible;
+    pointer-events: auto;
+  };
+
+  &__header {
+    @include align(flex, space-between, center);
+  };
+
+  & .buy-now-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+};
+
+.mobile-menu-nav {
+  margin-top: 40px;
+  margin-bottom: 110px;
+
+  @include font(700, 32px, 40px, 0em);  
+  text-align: center;
+
+  &__link {
+    color: var(--color-text-white);
+    transition: color var(--duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--color-text-black);
+    };
+  };
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  };
+};

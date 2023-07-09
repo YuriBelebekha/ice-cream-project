@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container header_container">
+  <div class="container header__container">
     <nav class="menu-nav">
       <div class="logo">
         <a class="logo__link" href="./index.html">
@@ -34,13 +34,15 @@
       </svg>
     </button>
 
-    <button class="btn-buy-now" type="button">
-      <div class="btn-buy-now__box">
+    <button class="buy-now-btn" type="button">
+      <div class="buy-now-btn__box">
         Buy now
-        <svg class="btn-buy-now__icon" width="12" height="12">
+        <svg class="buy-now-btn__icon" width="12" height="12">
           <use href="./images/icons/sprite.svg#icon-short-arrow-right"></use>
         </svg>
       </div>
     </button>
   </div>
+
+  <include src="./partials/mobile-menu.html"></include>
 </header>

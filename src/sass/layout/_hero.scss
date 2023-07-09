@@ -1,0 +1,59 @@
+.hero {  
+  position: relative;
+  min-height: 500px;
+  padding-top: 38px;
+
+  background-color: var(--bg-color-primary);  
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 320px 50px;
+
+  &__title {
+    max-width: 248px;
+    min-height: 98px;
+    padding-bottom: 32px;    
+
+    font-family: var(--font-family-heading);
+    @include font(500, 26px, 33px, 0.04em);
+    color: var(--color-text-white);
+    text-transform: uppercase;
+
+    & > span {
+      @include font(500, 34px, 33px, 0em);
+    };
+  };
+
+  &__bg-image {
+    position: absolute;
+    bottom: 0;
+    
+    // left: 50%;
+    // transform: translateX(-50%);
+    
+    
+  }
+};
+
+@media screen and (max-width: 479px) {
+  .hero {
+    background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320.png');
+  };
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320@2x.png');
+    };
+  };
+
+  @media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 288dpi),
+  screen and (min-resolution: 3dppx) {
+    .hero {
+      background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320@3x.png');
+    };
+  };
+};
+

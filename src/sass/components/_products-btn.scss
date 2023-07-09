@@ -1,0 +1,15 @@
+.products-btn {  
+  margin-right: 12px;
+  padding: 11px 26px;
+
+  border: 2px solid var(--color-second-accent-secondary);
+  border-radius: 8px;
+
+  @include font(600, 12px, 15px, 0em);
+
+  transition: border-color var(--duration) var(--timing-function);
+
+  &:hover {
+    border-color: var(--color-btn-hover-focus);
+  };
+};

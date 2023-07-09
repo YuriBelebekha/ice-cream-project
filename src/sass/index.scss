@@ -11,6 +11,11 @@
 @import './base/reset';
 
 @import './layout/header';
+@import './layout/mobile-menu';
+@import './layout/hero';
 
 @import './components/logo';
-@import './components/btn-buy-now';
+@import './components/mobile-menu-btn';
+@import './components/buy-now-btn';
+@import './components/products-btn';
+@import './components/about-btn';
