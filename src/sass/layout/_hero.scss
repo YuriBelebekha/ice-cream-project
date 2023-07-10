@@ -1,12 +1,11 @@
 .hero {  
   position: relative;
-  min-height: 500px;
+  min-height: 435px;
   padding-top: 38px;
 
   background-color: var(--bg-color-primary);  
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 320px 50px;
+  background-position: bottom;  
 
   &__title {
     max-width: 248px;
@@ -23,37 +22,35 @@
     };
   };
 
-  &__bg-image {
+  &__bg-main-image,
+  &__bg-dots-image {
     position: absolute;
     bottom: 0;
-    
-    // left: 50%;
-    // transform: translateX(-50%);
-    
-    
-  }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  };
+
+  &__bg-main-image {
+    padding-left: 20px;
+    z-index: 1;
+  };
 };
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .hero {
-    background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320.png');
-  };
+    min-height: 350px;
 
-
-  @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320@2x.png');
+    &__bg-main-image,
+    &__bg-dots-image {      
+      justify-content: right;
     };
-  };
 
-  @media screen and (min-device-pixel-ratio: 3),
-  screen and (min-resolution: 288dpi),
-  screen and (min-resolution: 3dppx) {
-    .hero {
-      background-image: url('../images/hero/mobile/hero-bg-dots-mobile-320@3x.png');
-    };
+    &__bg-main-image {
+      padding-left: 0;
+      right: 20px;
+    }
   };
+  
+  // зупинився тут; перевірити версію на 480px і рухатись далі
 };
-
