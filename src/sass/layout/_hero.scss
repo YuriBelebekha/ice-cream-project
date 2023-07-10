@@ -1,19 +1,20 @@
 .hero {  
   position: relative;
-  min-height: 435px;
-  padding-top: 38px;
+  min-height: 440px;
+  padding-top: 28px;
+  padding-bottom: 0;
 
   background-color: var(--bg-color-primary);  
   background-repeat: no-repeat;
   background-position: bottom;  
 
   &__title {
-    max-width: 248px;
-    min-height: 98px;
-    padding-bottom: 32px;    
+    max-width: 247px;
+    min-height: 97px;
+    margin-bottom: 32px;
 
     font-family: var(--font-family-heading);
-    @include font(500, 26px, 33px, 0.04em);
+    @include font(500, 26px, 31px, 0.04em);
     color: var(--color-text-white);
     text-transform: uppercase;
 
@@ -25,21 +26,27 @@
   &__bg-main-image,
   &__bg-dots-image {
     position: absolute;
-    bottom: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
+    bottom: 0;
   };
 
   &__bg-main-image {
     padding-left: 20px;
     z-index: 1;
+  };  
+};
+
+@media screen and (max-width: 768px) {
+  .hero__bg-plate-image {
+    display: none;    
   };
 };
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .hero {
-    min-height: 350px;
+    min-height: 343px;
 
     &__bg-main-image,
     &__bg-dots-image {      
@@ -49,8 +56,38 @@
     &__bg-main-image {
       padding-left: 0;
       right: 20px;
-    }
-  };
-  
-  // зупинився тут; перевірити версію на 480px і рухатись далі
+    };
+  };  
 };
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .hero {
+    min-height: 336px;
+    padding-top: 0;
+
+    &__title {
+      margin-bottom: 24px;
+    };
+
+    &__bg-main-image,
+    &__bg-dots-image {      
+      justify-content: center;
+    };
+
+    &__bg-main-image {      
+      padding-left: 314px;
+    };
+
+    &__bg-plate-image {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;      
+      bottom: 12px;
+      padding-right: 554px;
+      z-index: 1;
+    };
+  };  
+};
+
+// зупинився тут; треба додати на планшетну версію блок description & statistics

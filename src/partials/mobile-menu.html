@@ -2,11 +2,36 @@
   <div class="container">
     <div class="mobile-menu__header">
       <div class="logo">
-        <a class="logo__link" href="./index.html">
-          <svg class="logo__icon" width="40" height="38">
-            <use href="./images/icons/sprite.svg#icon-logo-ice-40-38"></use>
-          </svg>
-        </a>
+        <picture>
+          <source
+            srcset="
+              ./images/logo/main-logo-60.png    1x,
+              ./images/logo/main-logo-60@2x.png 2x,
+              ./images/logo/main-logo-60@3x.png 3x
+            "
+            media="(min-width: 1200px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./images/logo/main-logo-48.png    1x,
+              ./images/logo/main-logo-48@2x.png 2x,
+              ./images/logo/main-logo-48@3x.png 3x
+            "
+            media="(min-width: 480px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./images/logo/main-logo-40.png    1x,
+              ./images/logo/main-logo-40@2x.png 2x,
+              ./images/logo/main-logo-40@3x.png 3x
+            "
+            media="(max-width: 480px)"
+            type="image/png"
+          />
+          <img src="./images/logo/main-logo-40.png" alt="Logo" />
+        </picture>
       </div>
 
       <button class="mobile-menu-btn" type="button" data-menu-close>

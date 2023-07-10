@@ -6,9 +6,20 @@
   @include align(flex, space-between, center);
 };
 
-@media screen and (max-width: 767px) {
-  .menu-nav__list,
+.menu-nav__list,
+.buy-now-btn {
+  display: none;
+};
+
+@media screen and (min-width: 768px) {  
+  .header {
+    &__btns {
+      display: flex;
+      gap: 32px;
+    };
+  };
+  
   .buy-now-btn {
-    display: none;
+    display: block;
   };
 };
