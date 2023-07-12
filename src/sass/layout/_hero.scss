@@ -1,7 +1,7 @@
 .hero {  
   position: relative;
   min-height: 440px;
-  padding-top: 28px;
+  padding-top: 38px;
   padding-bottom: 0;
 
   background-color: var(--bg-color-primary);  
@@ -22,40 +22,48 @@
       @include font(500, 34px, 33px, 0em);
     };
   };
-
-  &__bg-main-image,
-  &__bg-dots-image {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    bottom: 0;
-  };
-
-  &__bg-main-image {
-    padding-left: 20px;
-    z-index: 1;
-  };  
 };
 
-@media screen and (max-width: 768px) {
-  .hero__bg-plate-image {
-    display: none;    
+.hero-bg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 320px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__dots,
+  &__ice-cream {
+    position: absolute;    
+    bottom: 0;    
+  };
+
+  &__ice-cream {
+    padding-left: 20px;    
+  };
+};
+
+@media screen and (max-width: 767px) {
+  .hero-bg__plate {
+    display: none;
   };
 };
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .hero {
+  .hero {    
     min-height: 343px;
+    padding-top: 28px;
+  };  
 
-    &__bg-main-image,
-    &__bg-dots-image {      
-      justify-content: right;
-    };
+  .hero-bg {
+    width: 480px;
+    justify-content: right;
 
-    &__bg-main-image {
-      padding-left: 0;
-      right: 20px;
+    &__ice-cream {
+      padding-left: 0;   
+      right: 20px; 
     };
   };  
 };
@@ -67,27 +75,56 @@
 
     &__title {
       margin-bottom: 24px;
-    };
+    };    
+  };
 
-    &__bg-main-image,
-    &__bg-dots-image {      
-      justify-content: center;
-    };
+  .hero-bg {
+    width: 768px;
 
-    &__bg-main-image {      
-      padding-left: 314px;
-    };
-
-    &__bg-plate-image {
+    &__plate {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      width: 100%;      
+      left: 32px;
       bottom: 12px;
-      padding-right: 554px;
-      z-index: 1;
     };
-  };  
+
+    &__ice-cream {
+      padding-left: 0;
+      right: 100px; 
+    };
+  };
+};
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-height: 563px;
+    padding-top: 37px;
+
+    &__title {
+      max-width: 367px;
+      min-height: 144px;
+      margin-bottom: 28px;
+      @include font(500, 38px, 48px, 0.04em);
+
+      & > span {
+        @include font(500, 38px, 48px, 0.04em);
+      };
+    };
+  };
+
+  .hero-bg {
+    width: 1200px;
+
+    &__plate {
+      position: absolute;
+      left: 16px;
+      bottom: 65px;
+    };
+
+    &__ice-cream {      
+      right: 92px;
+    };
+  };
 };
 
 // зупинився тут; треба додати на планшетну версію блок description & statistics
+// зробити адаптивну верстку після 480px (див. закоментований код в файлі _container.scss) 

@@ -1,19 +1,25 @@
-@media screen and (max-width: 768px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  };
-};
+.container {
+  // ALL versions    
+  padding-left: 20px;
+  padding-right: 20px;
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .container {
+  // MOBILE version
+  @media screen and (min-width: 480px) {
+    width: 480px;    
+    margin-left: auto;
+    margin-right: auto;
+  };
+
+  // TABLET version
+  @media screen and (min-width: 768px) {
+    width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   };
-};
 
-@media screen and (min-width: 1200px) {
-  .container {
+  // DESKTOP version
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
     padding-left: 16px;
     padding-right: 16px;
   };
