@@ -23,3 +23,35 @@
     display: block;
   };
 };
+
+@media screen and (min-width: 1200px) {
+  .menu-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+
+    &__list {
+      display: flex;
+    };
+
+    &__item:not(:last-child) {
+      margin-right: 28px;
+    };
+
+    &__link {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      @include font(700, 16px, 20px, 0em);
+      color: var(--color-text-white);
+      
+      transition: color var(--duration) var(--timing-function);
+
+      &:hover,
+      &:focus {
+        color: var(--color-second-accent-secondary);
+      };
+    };
+  };
+};

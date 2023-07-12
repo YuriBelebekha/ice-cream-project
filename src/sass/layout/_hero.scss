@@ -6,7 +6,7 @@
 
   background-color: var(--bg-color-primary);  
   background-repeat: no-repeat;
-  background-position: bottom;  
+  background-position: bottom;
 
   &__title {
     max-width: 247px;
@@ -21,6 +21,10 @@
     & > span {
       @include font(500, 34px, 33px, 0em);
     };
+  };
+
+  &__container {
+    z-index: 1;
   };
 };
 
@@ -46,7 +50,8 @@
 };
 
 @media screen and (max-width: 767px) {
-  .hero-bg__plate {
+  .hero-bg__plate,
+  .stats {
     display: none;
   };
 };
@@ -75,7 +80,11 @@
 
     &__title {
       margin-bottom: 24px;
-    };    
+    };
+
+    &__container {
+      position: relative;
+    };
   };
 
   .hero-bg {
@@ -90,6 +99,44 @@
     &__ice-cream {
       padding-left: 0;
       right: 100px; 
+    };
+  };
+
+  .stats {
+    position: absolute;
+    top: 14px;
+    right: 32px;
+    text-align: right;  
+    
+    &__item:first-child {
+      margin-bottom: 20px;
+    };
+
+    &__item-value {
+      @include font(900, 28px, 34px, 0.04em);
+      margin-bottom: 4px;
+    };
+
+    &__item-caption {
+      @include font(400, 8px, 10px, 0em);
+      color: var(--color-text-white);
+    };
+  };
+
+  .description {
+    width: 165px;
+    min-height: 70px;
+    margin-top: 40px;
+    margin-left: 185px;    
+
+    &__text {
+      margin-bottom: 29px;
+      @include font(400, 11px, 16px, 0em);
+      color: var(--color-text-white);
+    };
+
+    &__icon {
+      fill: var(--color-text-white);
     };
   };
 };
@@ -109,6 +156,10 @@
         @include font(500, 38px, 48px, 0.04em);
       };
     };
+
+    &__container {
+      position: relative;
+    };
   };
 
   .hero-bg {
@@ -124,7 +175,42 @@
       right: 92px;
     };
   };
-};
 
-// зупинився тут; треба додати на планшетну версію блок description & statistics
-// зробити адаптивну верстку після 480px (див. закоментований код в файлі _container.scss) 
+  .stats {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    text-align: right;  
+    
+    &__item:first-child {
+      margin-bottom: 16px;
+    };
+
+    &__item-value {
+      @include font(900, 46px, 56px, 0.04em);
+      margin-bottom: 4px;
+    };
+
+    &__item-caption {
+      @include font(400, 14px, 17px, 0em);
+      color: var(--color-text-white);
+    };
+  };
+
+  .description {
+    width: 215px;
+    min-height: 80px;
+    margin-top: 100px;
+    margin-left: 240px;    
+
+    &__text {
+      margin-bottom: 24px;
+      @include font(400, 14px, 20px, 0em);
+      color: var(--color-text-white);
+    };
+
+    &__icon {
+      fill: var(--color-text-white);
+    };
+  };
+};

@@ -1,8 +1,12 @@
 .about-btn {
+  padding: 12px 10px;
+
+  border-radius: 8px;
+
   @include font(600, 12px, 15px, 0em);
   color: var(--color-second-accent-secondary);
   text-decoration: underline;
-
+  
   &:hover {
     color: var(--color-btn-hover-focus);
   };
@@ -13,5 +17,10 @@
 
   &:disabled {
     color: var(--color-btn-disabled);
+  };
+
+  @media screen and (min-width: 1200px) {
+    padding: 13px 22px;
+    @include font(600, 14px, 18px, 0em);
   };
 };
