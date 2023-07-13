@@ -7,10 +7,12 @@ body {
 };
 
 section {
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
 };
 
+a,
 button {
-  cursor: pointer;
+  cursor: url('../images/icons/ice-cream-scoon.svg'), auto;
 };

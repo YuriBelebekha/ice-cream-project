@@ -1,8 +1,7 @@
-// @import './example';
-
 @import './utilities/variables';
 @import './utilities/functions';
 @import './utilities/mixins';
+@import './utilities/global';
 
 @import './vendors/normalize';
 
@@ -13,6 +12,7 @@
 @import './layout/header';
 @import './layout/mobile-menu';
 @import './layout/hero';
+@import './layout/products';
 
 @import './components/logo';
 @import './components/mobile-menu-btn';
