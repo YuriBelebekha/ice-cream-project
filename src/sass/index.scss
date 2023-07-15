@@ -4,6 +4,7 @@
 @import './utilities/global';
 
 @import './vendors/normalize';
+@import './vendors/visually-hidden';
 
 @import './base/common';
 @import './base/container';
@@ -14,6 +15,7 @@
 @import './layout/hero';
 @import './layout/products';
 @import './layout/about';
+@import './layout/advantages';
 
 @import './components/logo';
 @import './components/mobile-menu-btn';
