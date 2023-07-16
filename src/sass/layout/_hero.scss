@@ -22,10 +22,6 @@
       @include font(500, 34px, 33px, 0em);
     };
   };
-
-  &__container {
-    z-index: 1;
-  };
 };
 
 .hero-bg {
@@ -37,6 +33,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 
   &__dots,
   &__ice-cream {
