@@ -1,0 +1,30 @@
+.gallery {  
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background: linear-gradient(var(--bg-color-primary) 25%, #fff0 25%);;
+  // Зупинився тут, необхідно додати відсотки в залежності від версії екрану, для таблет висота зеленого фону 82 пікселя, для десктопу - 105 пікселів 
+  // Спробувати додати ефект Fade до swiper.js (треба спробувати це в новій версії свайперу)
+
+  &__box {
+    border-radius: 8px;
+    filter: drop-shadow(4px 4px 4px #00000040);
+
+    @media screen and (max-width: 479px) {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 280px;      
+    }; 
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      border-radius: 18px;
+    };
+
+    @media screen and (min-width: 1200px) {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1014px;
+      border-radius: 24px;
+    };
+  };
+};
