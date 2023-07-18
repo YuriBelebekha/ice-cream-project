@@ -5,8 +5,9 @@ import '../../node_modules/swiper/swiper.scss';
 
 const swiper = new Swiper('[data-swiper="gallery"]', {  
   modules: [Autoplay],
-  loop: true,
+  loop: true,  
+  speed: 2500,
   autoplay: {
-    delay: 4000,
+    delay: 3500,
   },  
 });
