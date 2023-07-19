@@ -1,0 +1,24 @@
+.swiper-pagination { 
+  text-align: center;
+};
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-pagination-bullet);
+  opacity: 1;
+  
+  &:not(:last-child) {
+    margin-right: 18px;
+  };
+  
+  .swiper-pagination-clickable & {
+    cursor: pointer;
+  };
+};
+
+.swiper-pagination-bullet-active {  
+  background-color: var(--color-pagination-bullet-active);
+};

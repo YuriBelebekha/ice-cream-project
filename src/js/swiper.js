@@ -1,6 +1,4 @@
 // "swiper": "^8.4.5"
-// import Swiper from 'swiper';
-// import { Autoplay } from 'swiper';
 import Swiper, { Autoplay, Pagination, Keyboard } from 'swiper';
 import '../../node_modules/swiper/swiper.scss';
 
@@ -25,4 +23,5 @@ const swiperReviews = new Swiper('[data-swiper="customer-reviews"]', {
 
   loop: true,  
   speed: 2500,
+  spaceBetween: 30,
 });
