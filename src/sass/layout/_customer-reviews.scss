@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
   };
 
   &__item-box {
@@ -34,6 +34,7 @@
 
   &__item-img {
     border-radius: 50%;
+    filter: var(--drop-shadow-cards);
   };
 
   &__item-text {
@@ -46,6 +47,7 @@
 
     background-color: var(--bg-color-primary);
     border-radius: 10px;
+    filter: var(--drop-shadow-cards);
 
     @include font(400, 12px, 31px, 0.06em);
     color: var(--color-text-white);

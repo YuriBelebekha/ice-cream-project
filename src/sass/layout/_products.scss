@@ -54,6 +54,7 @@
     position: relative;
     width: 280px;
     border-radius: 24px;
+    filter: var(--drop-shadow-cards);
 
     &:nth-child(1) {
       background-color: var(--color-first-accent-primary);

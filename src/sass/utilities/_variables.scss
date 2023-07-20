@@ -3,6 +3,7 @@
   --font-family-heading: 'Seymour One', sans-serif;
 
   --bg-color-primary: #84A178;
+  --bg-color-secondary: #FCFCFC;
 
   --color-first-accent-primary: #AEC6A5;
   --color-first-accent-secondary: #9CBE8F;
@@ -13,12 +14,15 @@
   
   --color-text-black: #131313;
   --color-text-white: #FCFCFC;
+  --color-text-grey: #ABABAB;
 
   --color-btn-hover-focus: #0A8817;
   --color-btn-disabled: #ABABAB;
 
   --color-pagination-bullet: #D9D9D9;
   --color-pagination-bullet-active: #84A178;
+
+  --drop-shadow-cards: drop-shadow(4px 4px 4px #00000040);
 
   --duration: 1250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
