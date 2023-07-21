@@ -135,6 +135,12 @@
 
     &__icon {
       fill: var(--color-text-white);
+      transition: transform var(--duration) var(--timing-function);
+
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      };
     };
   };
 };

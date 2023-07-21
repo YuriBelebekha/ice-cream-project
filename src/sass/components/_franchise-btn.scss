@@ -1,0 +1,38 @@
+.franchise-btn {
+  padding: 10px 54px;
+
+  border: 2px solid var(--color-second-accent-secondary);
+  border-radius: 10px;
+
+  @include font(600, 14px, 18px, 0em);
+  
+  transition: border-color var(--duration) var(--timing-function),
+              color        var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-btn-hover-focus);
+  };
+
+  &:focus {
+    color: var(--color-text-white);
+  };
+
+  &:disabled {        
+    background-color: var(--color-btn-disabled);
+  }; 
+
+  &__icon {
+    fill: currentColor;
+
+    &:hover &,
+    &:focus & {
+      fill: currentColor;
+    };
+  };
+
+  &__box {
+    @include align(flex, space-between, center);
+    column-gap: 4px;    
+  }; 
+};

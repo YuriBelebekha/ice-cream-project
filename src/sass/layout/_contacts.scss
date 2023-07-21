@@ -1,14 +1,13 @@
-.contacts {
-
-
-  @media screen and (max-width: 479px) {
-    background: linear-gradient(360deg, var(--bg-color-primary) 70%, transparent 0%);
-  };
-
+.contacts { 
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;      
+    };
   };
 
   &__item {
@@ -16,13 +15,13 @@
     border-radius: 24px;
     filter: var(--drop-shadow-cards);
 
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    };
-
     @media screen and (max-width: 767px) {      
       max-width: 280px;
       padding: 40px 32px 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      };
     };
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {      
@@ -34,6 +33,46 @@
       max-width: 368px;
       padding: 40px;
     };
+  };  
+
+  &__btns-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    row-gap: 16px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 16px;
+      margin-top: 40px;
+    };
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 60px;
+    };
+  };
+
+  @media screen and (max-width: 479px) {
+    background: linear-gradient(360deg, var(--bg-color-primary) 72.5%, transparent 0%);
+  };
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 0;
+    background: linear-gradient(360deg, var(--bg-color-primary) 76%, transparent 0%);
+  };
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 0;
+    padding-bottom: 40px;
+    background: linear-gradient(360deg, var(--bg-color-primary) 56%, transparent 0%);
+  };
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+    padding-bottom: 120px;
+    background: linear-gradient(360deg, var(--bg-color-primary) 84%, transparent 0%);
   };
 };
 
@@ -53,48 +92,106 @@
 
     @include font(500, 12px, 14px, 0.04em);
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+      @include font(500, 16px, 22px, 0.04em);
+    };
   };
 
   &__city {
-    margin-bottom: 8px;    
+    margin-bottom: 8px; 
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include font(500, 14px, 26px, 0.04em);
+    };
+
+    @media screen and (min-width: 1200px) {
+      @include font(500, 16px, 30px, 0.04em);
+    };
   };
 
   &__address-link {
     font-style: normal;
     color: #D6936D;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include font(500, 14px, 26px, 0.04em);
+    };
+
+    @media screen and (min-width: 1200px) {
+      @include font(500, 16px, 29px, 0.04em);
+    };
   };
 
   &__work-schedule {
     margin-bottom: 24px;
     border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1; 
+    
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    };
   };
 
   &__work-schedule-wrapper {
     padding-top: 24px;
     padding-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    };
   };
 
   &__weekdays {    
     margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 12px;
+    };
   };
 
-  &__day {
-    @include font(500, 12px, 22px, 0em);
+  &__day,
+  &__time {
+    @include font(500, 12px, 22px, 0em);    
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {      
+      @include font(500, 14px, 26px, 0em);
+    };
+    
+    @media screen and (min-width: 1200px) {      
+      @include font(500, 16px, 29px, 0em);
+    };
   };
 
   &__time {
-    @include font(500, 12px, 22px, 0em);
     color: var(--color-text-grey);
   };
   
   &__contacts a {
     @include font(500, 12px, 19px, 0em);
     color: var(--color-text-black);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {      
+      @include font(500, 14px, 21px, 0em);
+    };
+    
+    @media screen and (min-width: 1200px) {      
+      @include font(500, 16px, 24px, 0em);
+    };
   };
 
   &__phone {
     display: block;
     margin-bottom: 6px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {      
+      @include font(500, 14px, 21px, 0.04em);
+    };
+    
+    @media screen and (min-width: 1200px) {      
+      @include font(500, 16px, 24px, 0.04em);
+    };
   };
 };

@@ -303,4 +303,13 @@
       @include font(400, 16px, 28px, 0.04em);
     };
   };
+
+  &__icon {
+    transition: transform var(--duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    };
+  };
 };

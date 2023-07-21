@@ -1,5 +1,9 @@
 .customer-reviews {
   padding-top: 0;
+  
+  @media screen and (max-width: 479px) {
+    padding-bottom: 0;
+  };
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {      
     padding-bottom: 80px;

@@ -1,4 +1,5 @@
-.buy-now-btn {
+.location-btn {
+  padding: 12px 40px;
   color: var(--color-text-black);
   @include font(600, 14px, 18px, 0em);
 
@@ -16,6 +17,10 @@
   &:focus {        
     color: var(--color-text-white);   
   };
+  
+  &:disabled {        
+    background-color: var(--color-btn-disabled);
+  }; 
 
   &__icon {
     fill: currentColor;
@@ -26,13 +31,8 @@
     };
   };
 
-  &:disabled {        
-    background-color: var(--color-btn-disabled);
-  }; 
-
   &__box {
     @include align(flex, space-between, center);
-    column-gap: 4px;
-    padding: 12px 36px;
+    column-gap: 4px;    
   }; 
 };
