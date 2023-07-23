@@ -1,0 +1,32 @@
+.modal {
+  position: relative;
+
+  width: 280px;
+  height: auto;  
+  padding: 28px;
+  margin: 20px auto;
+
+  background-color: var(--bg-color-secondary);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+              0px 1px 1px rgba(0, 0, 0, 0.14),
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--color-second-accent-secondary);
+  border-radius: 10px;
+};
+
+.modal__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px; 
+
+  cursor: pointer;
+};
+
+.modal__close-icon {
+  transition: fill var(--duration) var(--timing-function);
+
+  .modal__close-btn:hover &,
+  .modal__close-btn:focus & {
+    fill: var(--color-second-accent-secondary);
+  };
+};

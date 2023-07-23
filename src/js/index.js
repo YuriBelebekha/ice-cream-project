@@ -1,2 +1,3 @@
-import './mobile-menu';
+import './mobileMenu';
 import './swiper';
+import './modal';
