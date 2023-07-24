@@ -7,7 +7,14 @@ const refs = {
 };
 
 refs.closeModalBtn.addEventListener('click', closeModal);
-refs.backdrop.addEventListener('click', closeModal);
+
+refs.backdrop.addEventListener('click', (e) => {
+  const click = e.composedPath()[0];
+
+  if (click === refs.backdrop) {
+    closeModal();
+  };
+});
 
 document.addEventListener('click', function (e) {
   const clickedElement = e.target.closest('[data-modal-open-path]'); 
