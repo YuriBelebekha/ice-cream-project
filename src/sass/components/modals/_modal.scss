@@ -30,3 +30,18 @@
     fill: var(--color-second-accent-secondary);
   };
 };
+
+.modal-container {
+  width: 224px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: var(--font-family-heading);
+    @include font(400, 16px, 24px, 0em);
+    text-align: center;
+  };
+
+  &__text{
+    @include font(400, 14px, 19px, 0em);
+  };
+};
