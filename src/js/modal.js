@@ -2,9 +2,12 @@ const refs = {
   modal: document.querySelector('[data-modal]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modalContainer: document.querySelectorAll('[data-modal-open-target]'),
+  body: document.querySelectorAll('body'),
+  backdrop: document.querySelector('.backdrop'),
 };
 
 refs.closeModalBtn.addEventListener('click', closeModal);
+refs.backdrop.addEventListener('click', closeModal);
 
 document.addEventListener('click', function (e) {
   const clickedElement = e.target.closest('[data-modal-open-path]'); 
@@ -13,6 +16,7 @@ document.addEventListener('click', function (e) {
     let target = clickedElement.dataset.modalOpenPath;
     let modalContainer = document.querySelector(`[data-modal-open-target="${target}"]`);
 
+    refs.body.forEach(target => target.classList.add('no-scroll'));
     modalContainer.classList.add('is-open');
     refs.modal.classList.remove('is-hidden');
     
@@ -31,31 +35,7 @@ function toggleModal() {
 };
 
 function closeModal() {
+  refs.body.forEach(target => target.classList.remove('no-scroll'));
   refs.modalContainer.forEach(item => { item.classList.remove('is-open') });
   refs.modal.classList.add('is-hidden');
 };
-
-
-// stopped here
-// Додати закриття модального вікна при кліку по backdrop
-// Додати неможливість прокручування основної сторінки коли відкрите модальне вікно
-
-
-
-
-// INITIAL
-
-// (() => {
-//   const refs = {
-//     modal: document.querySelector('[data-modal]'),
-//     closeModalBtn: document.querySelector('[data-modal-close]'),
-//     openModalBtn: document.querySelector('[data-modal-open]'),
-//   };
-
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//   };
-// })();
