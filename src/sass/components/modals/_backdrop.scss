@@ -14,7 +14,7 @@
               visibility var(--duration) var(--timing-function);
 
   &.is-hidden {
-    transform: scale(0) rotate(1deg);
+    transform: scale(0.1) rotate(1deg);
     visibility: hidden;
     pointer-events: none;
   };
