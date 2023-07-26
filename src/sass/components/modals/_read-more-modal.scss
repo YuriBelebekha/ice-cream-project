@@ -1,4 +1,12 @@
-.read-more-video iframe {
-  margin-bottom: 20px;
-  border-radius: 10px;
+.read-more-video {
+  margin-bottom: 20px;  
+  overflow: hidden;
+
+  & iframe {
+    border-radius: 10px;
+  };
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;    
+  };
 };

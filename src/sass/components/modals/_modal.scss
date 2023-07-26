@@ -12,6 +12,11 @@
               0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 2px solid var(--color-second-accent-secondary);
   border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    padding: 32px 60px;
+  };
 };
 
 .modal__close-btn {
@@ -39,9 +44,22 @@
     font-family: var(--font-family-heading);
     @include font(400, 16px, 24px, 0em);
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+      @include font(400, 20px, 28px, 0em);
+    };
   };
 
   &__text{
     @include font(400, 14px, 19px, 0em);
+
+    @media screen and (min-width: 768px) {
+      @include font(400, 16px, 22px, 0em);
+    };
+  };
+
+  @media screen and (min-width: 768px) {
+    width: 448px;
   };
 };
