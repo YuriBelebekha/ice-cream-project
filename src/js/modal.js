@@ -5,6 +5,7 @@ const refs = {
   body: document.querySelectorAll('body'),
   backdrop: document.querySelector('.backdrop'),
   videoplayer: document.getElementById('videoplayer'),
+  readMoreBtn: document.querySelector('.read-more-btn'),
 };
 
 const youTubeOptions = {
@@ -23,6 +24,10 @@ refs.backdrop.addEventListener('click', (e) => {
   };
 });
 
+refs.readMoreBtn.addEventListener('click', () => {
+  return refs.videoplayer.src = `${baseYoutubeSrc}&${autoplayOn}`;
+});
+
 document.addEventListener('click', function (e) {
   const clickedElement = e.target.closest('[data-modal-open-path]');
   
@@ -32,9 +37,7 @@ document.addEventListener('click', function (e) {
 
     refs.body.forEach(target => target.classList.add('no-scroll'));
     modalContainer.classList.add('is-open');
-    refs.modal.classList.remove('is-hidden');
-    refs.videoplayer.src = `${baseYoutubeSrc}&${autoplayOn}`;
-    
+    refs.modal.classList.remove('is-hidden');    
     return;
   };
 });
