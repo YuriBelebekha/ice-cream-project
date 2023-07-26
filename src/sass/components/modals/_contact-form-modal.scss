@@ -1,0 +1,97 @@
+.contact-form {
+  margin-top: 24px;  
+
+  &__list {
+    margin-bottom: 24px;
+  };
+
+  &__list-item:not(:first-child) {
+    margin-top: 10px;
+  };
+
+  &__label-text {
+    @include font(400, 12px, 17px, 0em);
+    color: var(--color-text-dark-grey);
+  };
+
+  &__input-wrapper {
+    position: relative;
+
+    display: block;
+    margin-top: 4px;
+  };
+
+  &__input,
+  &__message {
+    width: 100%;
+
+    background-color: rgba(248, 210, 78, 0.1);
+    border: 1px solid var(--bg-color-primary);
+    border-radius: 10px;
+    transition: border-color var(--duration) var(--timing-function);
+  };
+
+  &__input {
+    height: 32px;
+    padding-left: 42px;
+  };
+
+  &__message {
+    resize: none;
+    height: 64px;
+    margin-top: 4px;
+    padding: 12px;
+
+    &::placeholder {
+      @include font(400, 12px, 14px, 0.01em);
+      color: var(--color-text-grey);
+    };
+  };
+
+  &__input:focus,
+  &__message:focus {
+    outline: none;
+    border-color: var(--color-second-accent-secondary);
+  };
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    fill: var(--bg-color-primary);
+    transform: translateY(-50%);
+    transition: fill var(--duration) var(--timing-function);
+
+    .contact-form__input:focus + & {
+      fill: var(--color-second-accent-secondary);
+    };
+  };
+
+  &__submit-btn {
+    display: block;
+    padding: 12px 34px;  
+    margin: 0 auto;
+
+    color: var(--color-text-black);
+    @include font(600, 12px, 15px, 0em);
+
+    background-color: var(--color-second-accent-secondary);
+    border-radius: 10px;
+    
+    transition: background-color var(--duration) var(--timing-function),
+                color            var(--duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-btn-hover-focus);         
+    };
+
+    &:focus {        
+      color: var(--color-text-white);   
+    };
+
+    &:disabled {        
+      background-color: var(--color-btn-disabled);
+    };
+  };
+};

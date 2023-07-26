@@ -1,0 +1,44 @@
+.locations {
+  text-align: center;
+};
+
+.locations-map {
+  text-align: center;
+  margin-bottom: 24px;  
+  overflow: hidden;
+
+  & iframe {
+    border-radius: 10px;
+  };
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;    
+  };
+};
+
+.open-map-btn {
+  display: inline-block;
+  padding: 12px 34px;  
+
+  color: var(--color-text-black);
+  @include font(600, 12px, 15px, 0em);
+
+  background-color: var(--color-second-accent-secondary);
+  border-radius: 10px;
+  
+  transition: background-color var(--duration) var(--timing-function),
+              color            var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-btn-hover-focus);         
+  };
+
+  &:focus {        
+    color: var(--color-text-white);   
+  };
+
+  &:disabled {        
+    background-color: var(--color-btn-disabled);
+  };
+};
