@@ -14,7 +14,7 @@ const youTubeOptions = {
 };
 const { baseYoutubeSrc, controlsOff, autoplayOn } = youTubeOptions;
 
-refs.closeModalBtn.addEventListener('click', closeModal);
+refs.closeModalBtn.addEventListener('click', closeModal, { passive: true });
 
 refs.backdrop.addEventListener('click', (e) => {
   const click = e.composedPath()[0];
@@ -22,11 +22,11 @@ refs.backdrop.addEventListener('click', (e) => {
   if (click === refs.backdrop) {
     closeModal();
   };
-});
+}, { passive: true });
 
 refs.readMoreBtn.addEventListener('click', () => {
   return refs.videoplayer.src = `${baseYoutubeSrc}&${autoplayOn}`;
-});
+}, { passive: true });
 
 document.addEventListener('click', function (e) {
   const clickedElement = e.target.closest('[data-modal-open-path]');
@@ -40,13 +40,13 @@ document.addEventListener('click', function (e) {
     refs.modal.classList.remove('is-hidden');    
     return;
   };
-});
+}, { passive: true });
 
 document.addEventListener('keydown', (e) => {   
   if (e.code === 'Escape') {   
     closeModal();
   };
-});
+}, { passive: true });
 
 function toggleModal() {
   refs.modal.classList.toggle('is-hidden');
