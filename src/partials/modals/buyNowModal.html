@@ -1,7 +1,43 @@
 <div class="modal-container" data-modal-open-target="js-buy-now-btn">
-  Buy now
+  <h3 class="modal-container__title buy-now-title">Buy now</h3>
 
-  <!-- Зупинився тут. Додати розмітку даного модального вікна. -->
+  <form class="checkbox-form">
+    <ul class="checkbox-form__list list">
+      <li class="checkbox-form__item">
+        <input
+          class="checkbox-form__input visually-hidden"
+          type="checkbox"
+          id="ice-cream-checkbox"
+        />
+        <label class="checkbox-form__label" for="ice-cream-checkbox">
+          ice cream
+        </label>
+      </li>
+
+      <li class="checkbox-form__item">
+        <input
+          class="checkbox-form__input visually-hidden"
+          type="checkbox"
+          id="ice-coffee-checkbox"
+          checked
+        />
+        <label class="checkbox-form__label" for="ice-coffee-checkbox">
+          ice coffee
+        </label>
+      </li>
+
+      <li class="checkbox-form__item">
+        <input
+          class="checkbox-form__input visually-hidden"
+          type="checkbox"
+          id="milkshakes-checkbox"
+        />
+        <label class="checkbox-form__label" for="milkshakes-checkbox">
+          milkshakes
+        </label>
+      </li>
+    </ul>
+  </form>
 
   <form class="contact-form">
     <ul class="contact-form__list list">
