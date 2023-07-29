@@ -1,3 +1,106 @@
 <div class="modal-container" data-modal-open-target="js-milkshakes-btn">
-  Milkshakes
+  <h3 class="modal-container__title buy-now-title">Milkshakes</h3>
+
+  <div class="product-milkshakes"></div>
+
+  <ul class="nutrition-facts list">
+    <li class="nutrition-facts__item milkshakes">
+      <p class="nutrition-facts__name milkshakes">250</p>
+      <p class="nutrition-facts__value">kcal</p>
+    </li>
+
+    <li class="nutrition-facts__item milkshakes">
+      <p class="nutrition-facts__name milkshakes">8g</p>
+      <p class="nutrition-facts__value">Protein</p>
+    </li>
+
+    <li class="nutrition-facts__item milkshakes">
+      <p class="nutrition-facts__name milkshakes">5.5g</p>
+      <p class="nutrition-facts__value">Fats</p>
+    </li>
+
+    <li class="nutrition-facts__item milkshakes">
+      <p class="nutrition-facts__name milkshakes">38.6g</p>
+      <p class="nutrition-facts__value">Carbs</p>
+    </li>
+  </ul>
+
+  <div class="ingredients">
+    <h4 class="ingredients__title">Ingredients</h4>
+
+    <ul class="ingredients__list list">
+      <li class="ingredients__item">
+        <p class="ingredients__name">Milk</p>
+        <p class="ingredients__value">200ml</p>
+      </li>
+
+      <li class="ingredients__item">
+        <p class="ingredients__name">Belgian chocolate</p>
+        <p class="ingredients__value">30g</p>
+      </li>
+
+      <li class="ingredients__item">
+        <p class="ingredients__name">Cream</p>
+        <p class="ingredients__value">100ml</p>
+      </li>
+
+      <li class="ingredients__item">
+        <p class="ingredients__name">Cocoa powder</p>
+        <p class="ingredients__value">10g</p>
+      </li>
+
+      <li class="ingredients__item">
+        <p class="ingredients__name">Sugar</p>
+        <p class="ingredients__value">30g</p>
+      </li>
+
+      <li class="ingredients__item">
+        <p class="ingredients__name">Vanilla sugar</p>
+        <p class="ingredients__value">10g</p>
+      </li>
+    </ul>
+  </div>
+
+  <form class="contact-form">
+    <ul class="contact-form__list list">
+      <li class="contact-form__list-item">
+        <label class="contact-form__label">
+          <span class="contact-form__label-text">Name</span>
+          <span class="contact-form__input-wrapper">
+            <input class="contact-form__input" type="text" name="user_name" />
+            <svg class="contact-form__input-icon" width="18" height="18">
+              <use href="./images/icons/sprite.svg#person"></use>
+            </svg>
+          </span>
+        </label>
+      </li>
+
+      <li class="contact-form__list-item">
+        <label class="contact-form__label">
+          <span class="contact-form__label-text">Phone</span>
+          <span class="contact-form__input-wrapper">
+            <input class="contact-form__input" type="tel" name="user_phone" />
+            <svg class="contact-form__input-icon" width="18" height="18">
+              <use href="./images/icons/sprite.svg#handset"></use>
+            </svg>
+          </span>
+        </label>
+      </li>
+
+      <li class="contact-form__list-item">
+        <label class="contact-form__label">
+          <span class="contact-form__label-text">Comment</span>
+          <textarea
+            class="contact-form__message"
+            name="user_comment"
+            placeholder="Enter comments"
+          ></textarea>
+        </label>
+      </li>
+    </ul>
+
+    <button class="contact-form__submit-btn button" type="submit">
+      Submit
+    </button>
+  </form>
 </div>

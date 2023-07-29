@@ -20,21 +20,9 @@
     
       display: block;
       width: 132px;
-      height: 132px;
-      
+      height: 132px;      
     
       border-radius: 50%;
-
-      // @media screen and (min-width: 768px) {
-        
-        
-      // };
-
-      // @media screen and (min-width: 1200px) {
-      //   top: -59%;
-      //   width: 302px;
-      //   height: 302px;
-      // };
     };    
     
     &:nth-child(1)::before {  
@@ -81,16 +69,6 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
-      // @media screen and (min-width: 768px) {
-      //   top: -51%;
-      // };
-
-      // @media screen and (min-width: 1200px) {
-      //   top: -62%;
-      //   width: 302px;
-      //   height: 302px;
-      // };
     };
 
     &:nth-child(1)::after {

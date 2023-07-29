@@ -1,0 +1,88 @@
+.nutrition-facts {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
+  };
+
+  &__item {
+    width: 53px;
+    height: 72px;
+    
+    border-radius: 40px;
+
+    &:not(:last-child) {
+      margin-right: 9px;
+    };
+
+    @media screen and (min-width: 768px) {
+      width: 65px;
+      height: 90px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      };
+    };
+  };
+
+  &__name {
+    @include align(flex, center, center);
+    width: 43px;
+    height: 43px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    transform: translateY(-2px);
+
+    border-radius: 50%;    
+
+    @include font(500, 10px, 28px, 0em);
+
+    @media screen and (min-width: 768px) {
+      width: 53px;
+      height: 53px;
+      margin-bottom: 7px;
+      font-size: 12px;
+    };
+  };
+
+  &__value {
+    width: 34px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include font(400, 10px, 12px, 0em);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (min-width: 768px) {
+      @include font(500, 12px, 15px, 0em);
+    };
+  };
+};
+
+.ingredients {
+  text-align: center;  
+
+  &__title {
+    margin-bottom: 24px;
+    @include font(500, 20px, 28px, 0em);
+  };
+
+  &__list {
+    margin-bottom: 40px;
+  };
+
+  &__item {    
+    @include align(flex, space-between, center);
+    @include font(400, 14px, 25px, 0.04em);
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    };
+  };
+};
