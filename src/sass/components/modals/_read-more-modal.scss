@@ -1,8 +1,9 @@
-.read-more-video {
+.read-more-video {  
   margin-bottom: 20px;  
   overflow: hidden;
 
   & iframe {
+    width: 100%;
     border-radius: 10px;
   };
 
