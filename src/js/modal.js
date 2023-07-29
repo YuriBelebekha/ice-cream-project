@@ -26,7 +26,7 @@ refs.backdrop.addEventListener('click', (e) => {
 
 refs.readMoreBtn.addEventListener('click', () => {
   return refs.videoplayer.src = `${baseYoutubeSrc}&${autoplayOn}`;
-}, { passive: true });
+});
 
 document.addEventListener('click', function (e) {
   const clickedElement = e.target.closest('[data-modal-open-path]');

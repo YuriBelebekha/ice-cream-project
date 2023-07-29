@@ -152,6 +152,10 @@
   &__text-item:last-child {
     margin-bottom: 24px;
 
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    };
+
     @media screen and (min-width: 1200px) {
       margin-bottom: 54px;
     };
@@ -167,6 +171,8 @@
 };
 
 .read-more-btn {
+  padding: 12px 36px;
+  
   color: var(--color-text-black);
   @include font(600, 14px, 18px, 0em);
 
@@ -186,6 +192,7 @@
   };
 
   &__icon {
+    transform: translateY(2);
     fill: currentColor;
 
     &:hover &,
@@ -197,11 +204,5 @@
   &:disabled {        
     background-color: var(--color-btn-disabled);
   }; 
-
-  &__box {
-    @include align(flex, space-between, center);
-    column-gap: 4px;
-    padding: 12px 36px;
-  };
 };
 

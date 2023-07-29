@@ -23,6 +23,7 @@
   }; 
 
   &__icon {
+    transform: translateY(2);
     fill: currentColor;
 
     &:hover &,
@@ -30,9 +31,4 @@
       fill: currentColor;
     };
   };
-
-  &__box {
-    @include align(flex, space-between, center);
-    column-gap: 4px;    
-  }; 
 };
