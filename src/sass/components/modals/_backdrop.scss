@@ -7,7 +7,8 @@
   height: 100vh;
   overflow-y: scroll;
   z-index: 1000;
-
+  
+  overflow: hidden;
   background-color: var(--bg-color-backdrop);
   transform: scale(1) rotate(360deg);
   transition: transform  var(--duration) var(--timing-function),
