@@ -1,0 +1,22 @@
+.title-animation h1 {
+  color: rgba(255, 255, 255, 0.01);
+  background-size: cover;
+  background-image: url('../images/hero/animation/hero-title-animation.jpg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: background-title-animation 100s linear infinite;
+};
+
+@keyframes background-title-animation {
+  0% {
+    background-position: left 0px top 1%;
+  };
+
+  50% {
+    background-position: left 1500px top 1%;
+  };
+
+  100% {
+    background-position: left 0px top 1%;
+  };
+};
